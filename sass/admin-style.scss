@@ -1,0 +1,8 @@
+#menu-posts-project .wp-menu-image {
+	background: url('../images/computer-icon.png') no-repeat 6px -17px !important;
+}
+
+#menu-posts-project:hover .wp-menu-image, 
+#menu-posts-project.wp-has-current-submenu .wp-menu-image {
+	background-position: 6px 7px!important;
+}

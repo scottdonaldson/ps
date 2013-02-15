@@ -1,0 +1,107 @@
+/*! @license
+ * MyFonts Webfont Build ID 2223693, 2012-04-08T21:20:10-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Monroe Bold by Sudtipos
+ * URL: http://www.myfonts.com/fonts/sudtipos/monroe/bold/
+ * Copyright: Copyright (c) 2010 Distributed by Sudtipos. Designed by Daniel Hern&#x0087;ndez. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2223693
+ * 
+ * © 2012 Bitstream Inc
+*/
+@font-face {font-family: 'Monroe';src: url('../fonts/21EE4D_0_0.eot');src: url('../fonts/21EE4D_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/21EE4D_0_0.woff') format('woff'),url('../fonts/21EE4D_0_0.ttf') format('truetype');}
+.monroe {font-family: 'Monroe';}
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/aller_it-webfont.eot');
+    src: url('../fonts/aller_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_it-webfont.woff') format('woff'),
+         url('../fonts/aller_it-webfont.ttf') format('truetype'),
+         url('../fonts/aller_it-webfont.svg#AllerItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/aller_bd-webfont.eot');
+    src: url('../fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_bd-webfont.woff') format('woff'),
+         url('../fonts/aller_bd-webfont.ttf') format('truetype'),
+         url('../fonts/aller_bd-webfont.svg#AllerBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/aller_bdit-webfont.eot');
+    src: url('../fonts/aller_bdit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_bdit-webfont.woff') format('woff'),
+         url('../fonts/aller_bdit-webfont.ttf') format('truetype'),
+         url('../fonts/aller_bdit-webfont.svg#AllerBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/aller_rg-webfont.eot');
+    src: url('../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aller_rg-webfont.woff') format('woff'),
+         url('../fonts/aller_rg-webfont.ttf') format('truetype'),
+         url('../fonts/aller_rg-webfont.svg#AllerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.aller {font-family:'Aller';}
+@font-face {
+    font-family: 'IcoMoon';
+    src: url('../fonts/IcoMoon.eot');
+    src: url('../fonts/IcoMoon.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/IcoMoon.svg#IcoMoon') format('svg'),
+        url('../fonts/IcoMoon.woff') format('woff'),
+        url('../fonts/IcoMoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; }
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'IcoMoon';
+    font-style: normal;
+    speak: none;
+}
+.icon-facebook:before { 
+    content: "\e000"; 
+    border: 3px solid #E54F36;
+    border-radius: 50px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+    font-size: 60%;
+    margin-right: 0;
+    padding: 6px;
+    position: relative;
+    top: -6px;
+
+    .oldie & {
+        border: 0 none;
+        font-size: 100%;
+        top: 0;
+    }
+}
+.icon-facebook:hover:before {
+    border-color: #96AD93;
+}
+
+.icon-plus:before {
+    content: "\e001";
+}
+.icon-minus:before {
+    content: "\e002";
+}
+
+.icon-email:before { content: "\e003"; font-size: 120%; margin-right: 26px; position: relative; top: 4px; }
+footer .icon-email:before { font-size: 100%; margin-right: 4px; top: 2px;}
