@@ -21,7 +21,7 @@ function helper_js() { ?>
 add_action('wp_footer', 'helper_js');
 ?>
 
-    <h1 class="orange"><span class="tighten">We</span>’re <span class="tighten less">mo</span>ving!</h1>
+    <h1 class="orange"><span class="tighten">W</span><span class="tighten less">e</span>’re <span class="tighten less">mo</span>ving!</h1>
 
     <img class="map" src="<?php echo bloginfo('template_url'); ?>/images/map.png" alt="Parsley and Sprouts is moving from St. Paul, Minnesota, to Washington, DC!"></img>
 

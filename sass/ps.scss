@@ -1016,7 +1016,7 @@ header {
 			position: relative;
 			z-index: 2;
 			.tighten {
-				letter-spacing: -0.1em;
+				letter-spacing: -0.14em;
 				&.less {
 					letter-spacing: -0.05em;
 				}
@@ -1041,6 +1041,10 @@ header {
 			margin-top: -1em;
 			position: relative;
 			z-index: 2;
+		}
+
+		h3 {
+			font-size: 26px;
 		}
 
 		a {
