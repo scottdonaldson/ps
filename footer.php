@@ -12,7 +12,7 @@
 	</div>
 </footer>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     
 	<?php if (is_page('about')) { // Load autocomplete script for About page ?>
 		<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.autocomplete.js"></script>

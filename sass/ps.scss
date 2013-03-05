@@ -999,6 +999,56 @@ header {
 	}
 }
 
+// ----- Moving
+
+.page-template-pg-moving-php {
+	#main {
+		opacity: 0;
+
+		h1, h2, h3 {
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 100px;
+			margin-bottom: -0.6em;
+			line-height: 1;
+			position: relative;
+			z-index: 2;
+			.tighten {
+				letter-spacing: -0.1em;
+				&.less {
+					letter-spacing: -0.05em;
+				}
+			}
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			z-index: 1;
+
+			@media screen and (max-width: 800px) {
+				left: -4%;
+				max-width: 108%;
+				width: 108%;
+			}
+		}
+
+		h2 {
+			font-size: 52px;
+			margin-top: -1em;
+			position: relative;
+			z-index: 2;
+		}
+
+		a {
+			border-bottom: 2px dotted;
+		}
+	}
+}
+
 // ----- 404
 
 .error404 {
