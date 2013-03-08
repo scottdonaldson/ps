@@ -25,7 +25,7 @@
    	<?php } ?> 
        
 	<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.animate-colors-min.js"></script>
-	<script src="<?php echo bloginfo('template_url'); ?>/js/ps.js"></script>
+	<script src="<?php echo bloginfo('template_url'); ?>/js/ps.js?ver=03072013"></script>
 
 	<script type="text/javascript">
 

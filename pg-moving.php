@@ -9,7 +9,7 @@ function helper_js() { ?>
 	<script src="<?php echo bloginfo('template_url'); ?>/js/fittext.js"></script>
 	<script>
 		jQuery(document).ready(function($){
-			$('h1').fitText(0.8);
+			$('h1').fitText(0.81);
 			$('h2').fitText(1.7);
 
 			$('#main').animate({
@@ -26,7 +26,7 @@ add_action('wp_footer', 'helper_js');
     <img class="map" src="<?php echo bloginfo('template_url'); ?>/images/map.png" alt="Parsley and Sprouts is moving from St. Paul, Minnesota, to Washington, DC!"></img>
 
     <h2 class="orange">Goodbye St. Paul, Hello DC!</h2>
-    <h3>We’re relocating to the DC metro area this March and are not taking on new clients right now as we&nbsp;settle&nbsp;in.</h3>
+    <h3 class="pad">We’re relocating to the DC metro area this March and are not taking on new clients right now as we&nbsp;settle&nbsp;in.</h3>
     <h3>But feel free to look around! <a href="<?php echo home_url(); ?>/main">Continue&nbsp;to&nbsp;the&nbsp;homepage.</a></h3>
 
 <?php get_footer(); ?>

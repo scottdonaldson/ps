@@ -66,7 +66,7 @@ $(document).ready(function(){
 	
 	// Make sure bubbles stay underneath on window resizes
 	$(window).resize(function(){
-		if (body.hasClass('home')) { // Only do this on home page
+		if (body.hasClass('page-template-pg-main-php')) { // Only do this on home page
 			// Annoying, but have to do code and design separately.
 			var codePosition = code.position(),
 				codeExplo = $('.code'),
@@ -162,15 +162,17 @@ $(document).ready(function(){
 	})
 		
 	// Set height of div.piece equal to featured image (and on resizes)
-	piece.mouseover(function(){
-		$(this).find('.popup').css({
-			'top': -featImg.height()-5
+	if (!$('html').hasClass('ie7')) {
+		piece.mouseover(function(){
+			$(this).find('.popup').css({
+				'top': -featImg.height()-5
+			});
+		}).mouseleave(function(){
+			$(this).find('.popup').css({
+				'top': -8
+			});
 		});
-	}).mouseleave(function(){
-		$(this).find('.popup').css({
-			'top': -8
-		});
-	});
+	}
 
 	// Center stuff on main page if the window is too tall
 	var bodyHeight = body.height();

@@ -12,7 +12,7 @@
 	
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url') ?>" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/type.css" />
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/ps.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/css/ps.css?ver=03072013" />
 
 	<script src="<?php echo bloginfo('template_url'); ?>/js/libs/modernizr-2.5.3.min.js"></script>
 	<!--[if lt IE 9]>
@@ -33,7 +33,7 @@
         	<h3 class="visuallyhidden">Parsley &amp; Sprouts</h3>
         <?php } ?>
         
-        <a id="logo" href="<?php echo home_url(); ?>" rel="home" title="Parsley and Sprouts">
+        <a id="logo" href="<?php echo home_url(); ?>/main" rel="home" title="Parsley and Sprouts">
 			<img src="<?php echo bloginfo('template_url'); ?>/images/logo.png" title="Parsley and Sprouts" />
     	</a>
         
