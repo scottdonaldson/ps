@@ -67,6 +67,7 @@ body {
 	background-color: $grey;
 	color: $blue;
 	min-height: 100%;
+	overflow-x: hidden;
 	overflow-y: scroll;
 	padding-bottom: 90px;
 	position: relative;
@@ -961,7 +962,7 @@ header {
 		}
 
 		.rotate {
-			position: relative;
+			position: absolute;
 			top: -9999px; // hide all away
 			width: 0;
 			&.chosen {
@@ -982,9 +983,11 @@ header {
 }
 
 #controls {
+	bottom: 0;
 	margin: 0 auto;
 	position: absolute;
 	width: 68px;
+
 	.preload & { display: none; }
 	
 	.ie7 & {
@@ -1264,7 +1267,17 @@ footer {
 
 @media screen and (max-width: 800px) {
 	
-	.eighthundred { display: block !important; }
+	.eighthundred { 
+		display: block !important; 
+
+		&.visit {
+			-webkit-transition-property: background-color !important;
+			-moz-transition-property: background-color !important;
+			-ms-transition-property: background-color !important;
+			-o-transition-property: background-color !important;
+			transition-property: background-color !important;
+		}
+	}
 
 	// Header does a fair amount of shifting at 800px
 	header {
@@ -1549,15 +1562,17 @@ footer {
 			margin-right: 15%;
 		}
 
-		.eighthundred { margin-top: -30px; }
-
 		#tablet img,
 		#mobile img {
 			left: -25%;
 			max-width: none;
-			position: relative;
 			width: 150%;
 		}
+
+		#desktop img {
+			top: 45px;
+		}
+
 	}
 
 	footer {
