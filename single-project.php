@@ -76,7 +76,7 @@
                 $i++; } ?>
         </div>
 
-        <div id="controls">
+        <div id="controls" style="display: none;">
             <?php // empty divs for styling and controls for other rotators ?>
             <div class="active"></div>
             <div></div>

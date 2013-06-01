@@ -85,8 +85,8 @@ $(window).load(function(){
 
 	// Controls
 	var num,
-		controls = $('#controls'),
-		visit = $('.visit.eighthundred');
+		controls = $('#controls').fadeIn(),
+		visit = $('.visit.eighthundred');	
 	function posControls() {
 		controls.css({
 			'left': 0.5 * gallery.width() - 34 // 34 is half of the controls' width
