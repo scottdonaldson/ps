@@ -152,7 +152,7 @@ $(document).ready(function(){
 		});
 	}
 	sizeStricken();
-	$(window).resize(sizeStricken);
+	$(window).on('load resize', sizeStricken);
 
 	// Projects on main page
 	var piece = $('.no-touch .piece'),
