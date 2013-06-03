@@ -45,9 +45,9 @@ the_post(); ?>
         </section>
     
         <div id="minnesota" class="clearfix">
-            <img src="<?php echo bloginfo('template_url'); ?>/images/minnesota.png" />
+            <img src="<?php echo bloginfo('template_url'); ?>/images/ribbon-map.png" />
             
-            <h3>We're based out of St. Paul, Minnesota, but work with clients across the country.</h3>
+            <h3>We've moved! We're now based in Washington D.C., but work with clients across the country.</h3>
             
             <label>Where can we find you?</label>
             <input type="text" placeholder="Type your city and state" />

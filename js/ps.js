@@ -140,7 +140,24 @@ $(document).ready(function(){
 			'top': -500
 		});
 	});
-	
+
+	// Strikethrough text
+	var s = $('s');
+	$('s').append('<span class="stricken"></span>');
+	var stricken = $('.stricken');
+	function sizeStricken() {
+		$('.stricken').css({
+			top: 0.5 * s.height() - 1,
+			width: s.width()
+		});
+	}
+	sizeStricken();
+	$(window).resize(sizeStricken);
+
+	$('.callout').animate({
+		opacity: 1
+	}, 250);
+
 	// Projects on main page
 	var piece = $('.no-touch .piece'),
 		featImg = piece.find('img');
@@ -221,7 +238,8 @@ $(document).ready(function(){
 	
 	if (body.hasClass('page-template-pg-about-php')) {
 		$("#minnesota input").autocomplete("http://ws.geonames.org/searchJSON", {		
-			/* latitude/longitude of P&S: (44.949316,-93.086241) */
+			// latitude/longitude of P&S prior to move: (44.949316,-93.086241)
+			// In DC: (38.9097, -77.0231)
 			dataType: 'jsonp',
 			parse: function(data) {
 				var rows = new Array();
@@ -255,9 +273,9 @@ $(document).ready(function(){
 			results.hide();
 			
 			var R = 3959; // mi
-			var dLat = (data.lat-44.949316)*Math.PI/180;
-			var dLon = (data.lng+93.086241)*Math.PI/180;
-			var lat1 = 44.949316*Math.PI/180;
+			var dLat = (data.lat-38.9097)*Math.PI/180;
+			var dLon = (data.lng+77.0231)*Math.PI/180;
+			var lat1 = 38.9097*Math.PI/180;
 			var lat2 = data.lat*Math.PI/180;
 			
 			var a = ( Math.sin(.5*dLat) * Math.sin(.5*dLat) ) + 
@@ -270,9 +288,9 @@ $(document).ready(function(){
 			} else if (d>9 && d<100) {
 				results.html("You're <span class='monroe orange'>"+d+"</span> miles away &mdash; as the crow flies! Ready to <a href='contact'>get started</a>?");
 			} else if (d>100 && d<350) {
-				results.html("You're <span class='monroe orange'>"+d+"</span> miles from St. Paul &mdash; but only a quick email or phone call away. Ready to <a href='contact'>get started</a>?");
+				results.html("You're <span class='monroe orange'>"+d+"</span> miles from Washington D.C. &mdash; but only a quick email or phone call away. Ready to <a href='contact'>get started</a>?");
 			} else {
-				results.html("You're a whopping <span class='monroe orange'>"+d+"</span> miles from St. Paul &mdash; but just a short email or phone call away. Ready to <a href='contact'>get started</a>?");
+				results.html("You're a whopping <span class='monroe orange'>"+d+"</span> miles from Washington D.C. &mdash; but just a short email or phone call away. Ready to <a href='contact'>get started</a>?");
 			}
 			results.fadeIn();
 		});

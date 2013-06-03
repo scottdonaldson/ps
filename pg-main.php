@@ -7,7 +7,7 @@ the_post(); ?>
 
 <div class="callout">
 	<p>
-    	Parsley &amp; Sprouts is a</p><p>two-person</p><p>web design studio</p><p>based</p><p>out of the Twin Cities. We</p><p>build</p><p>websites</p><p>with 
+    	Parsley &amp; Sprouts is a</p><p>two-person</p><p>web design studio</p><p>based</p><p>out of <s>the&nbsp;Twin&nbsp;Cities</s> Washington, D.C. We</p><p>build</p><p>websites</p><p>with 
         <a id="design">beautiful&nbsp;design</a>&nbsp;and&nbsp;<a id="code">clean&nbsp;code</a>.
     </p>
 </div>
@@ -40,5 +40,9 @@ the_post(); ?>
 	<?php endwhile; wp_reset_query(); ?>   
 
 </div>
+
+<script>
+document.getElementsByClassName('callout')[0].style.opacity = '0';
+</script>
 
 <?php get_footer(); ?>

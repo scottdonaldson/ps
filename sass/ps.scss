@@ -357,6 +357,17 @@ header {
 	}
 }
 
+s {
+	position: relative;
+	text-decoration: none;
+}
+
+.stricken {
+	border-bottom: 2px solid $orange;
+	position: absolute;
+	left: 0;
+}
+
 // ----- About
 
 .page-template-pg-about-php {
@@ -483,7 +494,6 @@ header {
 	    img {
 			display: block;
 			margin: 0 auto 30px;
-			max-width: 80%;
 			padding: 10px;
 		}
 
@@ -523,6 +533,7 @@ header {
 		}
 
 		.results {
+			padding-top: 25px;
 			span {
 				font-size: 30px;
 				line-height: 0;
@@ -1212,14 +1223,15 @@ footer {
 
 		#minnesota {
 			clear: left;
-			margin: 0 10% 100px;
+			margin: 0 0 100px 0;
 			padding-left: 0;
 			position: relative;
-			width: 80%;
+			width: 100%;
 
 		    img {
 				float: left;
-				width: 50%;
+				margin-right: 5%;
+				width: 60%;
 			}
 
 			h3,
@@ -1237,11 +1249,7 @@ footer {
 			}
 
 			input {
-				width: 50%;
-			}
-
-			.results {
-				clear: both;
+				width: 35%;
 			}
 		}
 	}
@@ -1261,6 +1269,21 @@ footer {
 			font-size: 14px;
 		}
 
+	}
+
+	.page-template-pg-about-php {
+		#minnesota {
+
+			label,
+			input,
+			.results {
+				clear: left;
+				top: 0;
+			}
+			input {
+				width: 100%;
+			}
+		}	
 	}
 
 }
@@ -1519,13 +1542,6 @@ footer {
 			img {
 				float: none;
 				margin: 0 auto;
-			}
-
-			h3, label, input, .results {
-				top: 0;
-			}
-
-			input {
 				width: 100%;
 			}
 
