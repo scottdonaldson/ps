@@ -42,6 +42,8 @@ the_post(); ?>
 </div>
 
 <script>
+// hide the callout (but keep its dimensions in place) so that
+// the strikethrough being sized doesn't get seen by the user
 document.getElementsByClassName('callout')[0].style.opacity = '0';
 </script>
 
