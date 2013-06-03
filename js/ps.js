@@ -154,10 +154,6 @@ $(document).ready(function(){
 	sizeStricken();
 	$(window).resize(sizeStricken);
 
-	$('.callout').animate({
-		opacity: 1
-	}, 250);
-
 	// Projects on main page
 	var piece = $('.no-touch .piece'),
 		featImg = piece.find('img');
@@ -300,6 +296,11 @@ $(document).ready(function(){
 });
 
 $(window).load(function(){
+
+	// fade in the callout
+	$('.callout').animate({
+		opacity: 1
+	}, 250);
 
 	var body = $('body'),
 		main = $('#main');
