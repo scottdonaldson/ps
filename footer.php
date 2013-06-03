@@ -12,20 +12,19 @@
 	</div>
 </footer>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
     
 	<?php if (is_page('about')) { // Load autocomplete script for About page ?>
 		<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.autocomplete.js"></script>
-	<?php }
-		  if (is_single()) { // Load rotate script for projects ?>
+	<?php } elseif (is_single()) { // Load rotate script for projects ?>
     	<script src="<?php echo bloginfo('template_url'); ?>/js/rotate.js"></script> 
-   	<?php } 
-   		  if (is_page('services')) { // Load separate script for services ?>
+   	<?php } elseif (is_page('services')) { // Load separate script for services ?>
    		<script src="<?php echo bloginfo('template_url'); ?>/js/services.js"></script> 
    	<?php } ?> 
        
 	<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.animate-colors-min.js"></script>
-	<script src="<?php echo bloginfo('template_url'); ?>/js/ps.js?ver=03072013"></script>
+	<script src="<?php echo bloginfo('template_url'); ?>/js/ps.js"></script>
 
 	<script type="text/javascript">
 
