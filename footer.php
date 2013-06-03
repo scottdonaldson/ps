@@ -16,7 +16,7 @@
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
     
 	<?php if (is_page('about')) { // Load autocomplete script for About page ?>
-		<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.autocomplete.js"></script>
+		<script src="<?php echo bloginfo('template_url'); ?>/js/jquery.autocomplete.min.js"></script>
 	<?php } elseif (is_single()) { // Load rotate script for projects ?>
     	<script src="<?php echo bloginfo('template_url'); ?>/js/rotate.js"></script> 
    	<?php } elseif (is_page('services')) { // Load separate script for services ?>
