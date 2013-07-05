@@ -73,7 +73,7 @@ body {
 	position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: 'Monroe'; }
+h1, h2, h3, h4, h5, h6, .monroe { font-family: "Monroe"; }
 
 a,
 a:visited {
@@ -106,47 +106,86 @@ header {
 			height: 56px;
 		}
 	}
+}
 
-	.menu {
-		float: right;
+#logo img {
+	float: left;
+	height: auto;
+	margin-top: 20px;
+	width: 277px;
+}
 
-		li {
-			float:left;
-			font-size: 16px;
-			text-transform: uppercase;
+.menu {
+	float: right;
 
-			a,
-			a:visited {
-				background: $blue;
-				color: $green;
-				display: block;
-				height: 150px;
-				padding: 110px 20px 0;
-				@include no-transition;
+	li {
+		float:left;
+		font-size: 16px;
+		text-transform: uppercase;
 
-				&:active,
-				&:hover {
-					background: $turquoise;
-					border-bottom: 4px solid $orange;
-				}
+		a,
+		a:visited {
+			background: $blue;
+			color: $green;
+			display: block;
+			height: 150px;
+			padding: 110px 20px 0;
+			@include no-transition;
 
-				.ie7 & {
-					height: 36px; // padding in content-box
-				}
-			}
-
-			&.current_page_item a {
+			&:active,
+			&:hover {
 				background: $turquoise;
 				border-bottom: 4px solid $orange;
 			}
+
+			.ie7 & {
+				height: 36px; // padding in content-box
+			}
+		}
+
+		&.current_page_item a {
+			background: $turquoise;
+			border-bottom: 4px solid $orange;
+		}
+	}
+}
+
+#vegtab {
+	background: $green;
+	display: block;
+	color: $blue;
+	padding: 4px;
+	position: absolute;
+	top: 24px;
+	right: -108px;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	width: 150px;
+
+	&:hover,
+	&:active {
+		color: $blue;
+		right: 0;
+
+		.touch & {
+			right: -108px;
+		}
+
+		@media screen and (max-width: 600px) {
+			right: -108px;
 		}
 	}
 
 	img {
-		float: left;
-		height: auto;
-		margin-top: 20px;
-		width: 277px;
+		margin-right: 10px;
+	}
+
+	span {
+		position: relative;
+		top: 0.2em;
 	}
 }
 
@@ -179,9 +218,9 @@ header {
 
 	p {
 		font-size: 34px;
-		font-family:'Monroe';
-		display:inline;
-		margin-right:8px;
+		font-family: "Monroe";
+		display: inline;
+		margin-right: 8px;
 	}
 
 	&.secondary p {
@@ -1174,11 +1213,11 @@ footer {
 				}
 			}
 		}
-
-		img {
-			width: 230px;
-		}
 	}
+
+	#logo img {
+		width: 230px;
+	}	
 
 }
 
@@ -1311,18 +1350,6 @@ footer {
 			padding: 0;
 		}
 
-		#logo {
-			height: auto;
-			padding-top: 20px;
-		}
-
-		img {
-			display: block;
-			float: none;
-			margin: 0 auto;
-			width: 180px;
-		}
-
 		.menu {
 			height: 50px;
 			margin-top: 10px;
@@ -1348,6 +1375,18 @@ footer {
 					background: $blue;
 				}
 			}
+		}
+	}
+
+	#logo {
+		height: auto;
+		padding-top: 20px;
+
+		img {
+			display: block;
+			float: none;
+			margin: 0 auto;
+			width: 180px;
 		}
 	}
 

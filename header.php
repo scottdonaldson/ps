@@ -40,7 +40,12 @@
     	<nav class="monroe">
 			<?php wp_nav_menu(); ?>
         </nav>
-    </div>    
+    </div>
+
+    <a id="vegtab" class="monroe" href="http://www.parsleyandsprouts.com/vegetarian" target="_blank">
+		<img src="<?= bloginfo('template_url'); ?>/images/vegicon.png" alt="Hungry?" height="34" width="34">
+		<span>Hungry?</span>
+	</a>
 </header>
 
 <div id="main" role="main" class="clearfix row">
