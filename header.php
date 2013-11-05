@@ -42,7 +42,7 @@
         </nav>
     </div>
 
-    <a id="vegtab" class="monroe" href="http://www.parsleyandsprouts.com/vegetarian" target="_blank">
+    <a id="vegtab" class="monroe" href="http://www.parsleyandsprouts.com/vegetarian" target="_blank" onclick="_gaq.push(['_trackEvent', 'Click', 'External Link', 'Top 10 Vegetarian Restaurants']);">
 		<img src="<?= bloginfo('template_url'); ?>/images/vegicon.png" alt="Hungry?" height="34" width="34">
 		<span>Hungry?</span>
 	</a>
