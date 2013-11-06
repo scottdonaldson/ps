@@ -84,7 +84,7 @@
         </div>
 
         <?php if (get_field('site_url')) { ?>
-            <a class="visit eighthundred" href="<?php the_field('site_url'); ?>" target="_blank">Visit the Site</a>
+            <a class="visit eighthundred" href="<?php the_field('site_url'); ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'Click', 'External Link', <?php the_title(); ?>]);">Visit the Site</a>
         <?php } ?>
         
         <?php } ?>
