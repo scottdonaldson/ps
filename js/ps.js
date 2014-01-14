@@ -267,26 +267,27 @@ $(document).ready(function(){
 			max: 5
 		}).result(function(event, data, formatted) {
 			results.hide();
-			
+
+	
 			var R = 3959; // mi
-			var dLat = (data.lat-38.9097)*Math.PI/180;
-			var dLon = (data.lng+77.0231)*Math.PI/180;
-			var lat1 = 38.9097*Math.PI/180;
-			var lat2 = data.lat*Math.PI/180;
+			var dLat = (parseFloat(data.lat) - 38.9097) * Math.PI/180;
+			var dLon = (parseFloat(data.lng) + 77.0231) * Math.PI/180;
+			var lat1 = 38.9097 * Math.PI / 180;
+			var lat2 = parseFloat(data.lat) * Math.PI / 180;
 			
-			var a = ( Math.sin(.5*dLat) * Math.sin(.5*dLat) ) + 
-					( Math.sin(.5*dLon) * Math.sin(.5*dLon) * Math.cos(lat1) * Math.cos(lat2) ); 
-			var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+			var a = ( Math.sin(0.5 * dLat) * Math.sin(0.5 * dLat) ) + 
+					( Math.sin(0.5 * dLon) * Math.sin(0.5 * dLon) * Math.cos(lat1) * Math.cos(lat2) ); 
+			var c = 2 * Math.atan2( Math.sqrt(a), Math.sqrt(1 - a) ); 
 			var d = Math.ceil(R * c);
 			
-			if (d<10) {
+			if ( d < 10 ) {
 				results.html("You're practically in our backyard! Ready to <a href='contact'>get started</a>?");
-			} else if (d>9 && d<100) {
-				results.html("You're <span class='monroe orange'>"+d+"</span> miles away &mdash; as the crow flies! Ready to <a href='contact'>get started</a>?");
-			} else if (d>100 && d<350) {
-				results.html("You're <span class='monroe orange'>"+d+"</span> miles from Washington D.C. &mdash; but only a quick email or phone call away. Ready to <a href='contact'>get started</a>?");
+			} else if ( d > 9 && d < 100 ) {
+				results.html("You're <span class='monroe orange'>" + d + "</span> miles away &mdash; as the crow flies! Ready to <a href='contact'>get started</a>?");
+			} else if ( d > 100 && d < 350 ) {
+				results.html("You're <span class='monroe orange'>" + d + "</span> miles from Washington D.C. &mdash; but only a quick email or phone call away. Ready to <a href='contact'>get started</a>?");
 			} else {
-				results.html("You're a whopping <span class='monroe orange'>"+d+"</span> miles from Washington D.C. &mdash; but just a short email or phone call away. Ready to <a href='contact'>get started</a>?");
+				results.html("You're a whopping <span class='monroe orange'>" + d + "</span> miles from Washington D.C. &mdash; but just a short email or phone call away. Ready to <a href='contact'>get started</a>?");
 			}
 			results.fadeIn();
 		});
