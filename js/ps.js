@@ -10,8 +10,8 @@ $(document).ready(function(){
 	
 	// Explanation bubbles to appear below callout text
 	$('#design, #code').mouseover(function(){
-		$this = $(this);
-		var id = $this.attr('id'),
+		var $this = $(this),
+			id = $this.attr('id'),
 			explo = $('div.'+id),
 			pointer = explo.find('.pointer');
 	
@@ -159,7 +159,7 @@ $(document).ready(function(){
 		featImg = piece.find('img');
 
 	piece.each(function(){ // margin right and clearing hack for IE8 and below
-		$this = $(this);
+		var $this = $(this);
 		if ($this.index()%3 == 2) {
 			$this.addClass('n-3-b');
 		}
@@ -217,7 +217,7 @@ $(document).ready(function(){
 	service.last().closest('.service').addClass('n-3');
 	
 	service.on('click',function(){
-		$this = $(this);
+		var $this = $(this);
 		
 		$this.find('span').toggleClass('icon-plus').toggleClass('icon-minus');
 		$this.next('p').slideToggle();
@@ -308,8 +308,7 @@ $(window).load(function(){
 	
 	// Contact form
 	$('.contact-form').submit(function(){
-		$this = $(this);
-		$this.find('input[type="submit"]').fadeOut();
+		$(this).find('input[type="submit"]').fadeOut();
 	});
 
 });
